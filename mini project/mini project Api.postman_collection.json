@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "f7b97289-d76f-4dd0-949d-12090eb7e31d",
+		"name": "mini project Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50652240",
+		"_collection_link": "https://kumbihaset-5898673.postman.co/workspace/Haset-Tesfaye's-Workspace~46c4cae0-e410-446d-89ec-07dc2cf80dcc/collection/50652240-f7b97289-d76f-4dd0-949d-12090eb7e31d?action=share&source=collection_link&creator=50652240"
+	},
+	"item": [
+		{
+			"name": "post product success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"iPhone 13\",\r\n  \"price\": 900,\r\n  \"description\": \"Apple smartphone\",\r\n  \"stock\": 15,\r\n  \"category\": \"Electronics\",\r\n  \"image\": \"https://example.com/iphone.jpg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product success",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"iPhone 13\",\r\n  \"price\": 900,\r\n  \"description\": \"Apple smartphone\",\r\n  \"stock\": 15,\r\n  \"category\": \"Electronics\",\r\n  \"image\": \"https://example.com/iphone.jpg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product by id success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/products/698e59a5bb2dc1b3a555b6f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"698e59a5bb2dc1b3a555b6f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put product /id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"iPhone 14 Pro\",\r\n  \"price\": 1200,\r\n  \"description\": \"Latest Apple smartphone with A16 chip and improved camera\",\r\n  \"stock\": 30,\r\n  \"category\": \"Electronics\",\r\n  \"image\": \"https://example.com/images/iphone14pro.jpg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/products/698e59a5bb2dc1b3a555b6f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"698e59a5bb2dc1b3a555b6f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/products/698cfef245e81cef1f293c42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"698cfef245e81cef1f293c42"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"698e59a5bb2dc1b3a555b6f1\",\r\n  \"quantity\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put cart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"698e59a5bb2dc1b3a555b6f1\",\r\n  \"quantity\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"698e59a5bb2dc1b3a555b6f1\",\r\n  \"quantity\": 5\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cart/698e59a5bb2dc1b3a555b6f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cart",
+						"698e59a5bb2dc1b3a555b6f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"698e41f9ae66a78ab14b99c8\",\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"productId\": \"698e4272ae66a78ab14b99ca\",\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"totalPrice\": 2600,\r\n  \"customerName\": \"haset tesfaye\",\r\n  \"address\": \"nefas silk ,addis ababa, ethiopia\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/orders/698e6593bdc8ee752d43e53c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"698e6593bdc8ee752d43e53c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
