@@ -49,7 +49,7 @@ API_URL=/api/v1
 PORT=3000
 
 3,start server
-`node app,js
+`node app.js
 
 4 test using post man
 
